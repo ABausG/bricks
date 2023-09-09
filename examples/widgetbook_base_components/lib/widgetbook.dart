@@ -21,8 +21,22 @@ class WidgetbookApp extends StatelessWidget {
       addons: [
         MaterialThemeAddon(
           themes: [
-            WidgetbookTheme(name: 'Light', data: ThemeData.light()),
-            WidgetbookTheme(name: 'Dark', data: ThemeData.dark()),
+            WidgetbookTheme(
+              name: 'Light',
+              data: ThemeData.light(useMaterial3: false),
+            ),
+            WidgetbookTheme(
+              name: 'Dark',
+              data: ThemeData.dark(useMaterial3: false),
+            ),
+            WidgetbookTheme(
+              name: 'Light M3',
+              data: ThemeData.light(useMaterial3: true),
+            ),
+            WidgetbookTheme(
+              name: 'Dark M3',
+              data: ThemeData.dark(useMaterial3: true),
+            ),
           ],
         ),
       ],
