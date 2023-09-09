@@ -1,0 +1,24 @@
+name: widgetbook_base_components_example
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.0-42.2.beta <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  widgetbook: ^3.2.0
+  widgetbook_annotation: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  widgetbook_generator: ^3.1.0
+  build_runner: ^2.4.6
+
+flutter:
+  uses-material-design: true

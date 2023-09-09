@@ -1,0 +1,9 @@
+name: widgetbook_base_components
+description: A brick to add base Widgets to your Widgetbook
+
+repository: https://github.com/abausg/bricks/bricks/widgetbook_base_components
+
+version: 0.0.1
+
+environment:
+  mason: ">=0.1.0-dev.50 <0.1.0"
