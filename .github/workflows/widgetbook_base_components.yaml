@@ -6,6 +6,7 @@ on:
     paths:
       - bricks/widgetbook_base_components/**
       - examples/widgetbook_base_components/**
+      - .github/workflows/widgetbook_base_components.yaml
   workflow_dispatch:
 
 concurrency:
