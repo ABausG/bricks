@@ -34,4 +34,4 @@ jobs:
         with:
           customArgs: -t lib/widgetbook.dart
           workingDir: examples/widgetbook_base_components
-          baseHref: /bricks/widgetbook_base_components/web
+          baseHref: /bricks/widgetbook_base_components/web/
