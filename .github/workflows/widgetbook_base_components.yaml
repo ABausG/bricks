@@ -22,6 +22,8 @@ jobs:
       - uses: subosito/flutter-action@v2
       - name: Activate Mason
         run: dart pub global activate mason_cli
+      - name: Set Output dir
+        run: flutter config --build-dir=build/web/widgetbook_base_components
       - name: Build Brick in example
         working-directory: examples/widgetbook_base_components
         run: mason get; mason make widgetbook_base_components
@@ -32,4 +34,4 @@ jobs:
         with:
           customArgs: -t lib/widgetbook.dart
           workingDir: examples/widgetbook_base_components
-          baseHref: /bricks/
+          baseHref: /bricks/widgetbook_base_components/web
