@@ -11,47 +11,50 @@ class BaseComponentList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      itemCount: components.length,
-      padding: const EdgeInsets.all(16),
-      separatorBuilder: (_, __) => const Divider(),
-      itemBuilder: (_, index) {
-        final e = components.entries.elementAt(index);
-        return Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              e.key,
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            Wrap(
-              crossAxisAlignment: WrapCrossAlignment.end,
-              children: e.value.entries
-                  .map(
-                    (e) => Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          e.value,
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              e.key,
-                              style: Theme.of(context).textTheme.labelSmall,
+    return Material(
+      color: Colors.transparent,
+      child: ListView.separated(
+        itemCount: components.length,
+        padding: const EdgeInsets.all(16),
+        separatorBuilder: (_, __) => const Divider(),
+        itemBuilder: (_, index) {
+          final e = components.entries.elementAt(index);
+          return Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                e.key,
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              Wrap(
+                crossAxisAlignment: WrapCrossAlignment.end,
+                children: e.value.entries
+                    .map(
+                      (e) => Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            e.value,
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                e.key,
+                                style: Theme.of(context).textTheme.labelSmall,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  )
-                  .toList(),
-            ),
-          ],
-        );
-      },
+                    )
+                    .toList(),
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }
@@ -437,33 +440,36 @@ Widget textFieldBaseComponents(BuildContext context) {
   final error = context.knobs.stringOrNull(
     label: 'Error',
   );
-  return Column(
-    mainAxisSize: MainAxisSize.min,
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Flexible(flex: 1, child: SizedBox()),
-          Flexible(
-            flex: 2,
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: hint,
-                labelText: label,
-                helperText: helper,
-                errorText: error,
+  return Material(
+    color: Colors.transparent,
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Flexible(flex: 1, child: SizedBox()),
+            Flexible(
+              flex: 2,
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: hint,
+                  labelText: label,
+                  helperText: helper,
+                  errorText: error,
+                ),
               ),
             ),
-          ),
-          const Flexible(flex: 1, child: SizedBox()),
-        ],
-      ),
-      TextButton(
-        onPressed: FocusNode().requestFocus,
-        child: const Text('Clear Focus'),
-      ),
-    ],
+            const Flexible(flex: 1, child: SizedBox()),
+          ],
+        ),
+        TextButton(
+          onPressed: FocusNode().requestFocus,
+          child: const Text('Clear Focus'),
+        ),
+      ],
+    ),
   );
 }
 
