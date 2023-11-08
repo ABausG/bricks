@@ -1,3 +1,13 @@
-# 0.1.0+1
+# 1.0.0
 
-- TODO: Describe initial release.
+- Initial Brick with Support for the following Components
+    - Buttons
+    - TextStyles
+    - Controls
+    - Card
+    - AlertDialog
+    - Indicators
+    - Chips
+    - TextFields
+    - ListTile
+    - BottomNavigationBar
