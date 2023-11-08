@@ -57,7 +57,7 @@ class BaseComponentList extends StatelessWidget {
 }
 
 @widgetbook.UseCase(name: 'Buttons', type: BaseComponents)
-Widget buttons(BuildContext context) {
+Widget buttonsBaseComponents(BuildContext context) {
   final label = context.knobs.string(
     label: 'Label',
     initialValue: 'Label',
@@ -169,7 +169,7 @@ Widget buttons(BuildContext context) {
 }
 
 @widgetbook.UseCase(name: 'TextStyles', type: BaseComponents)
-Widget textStyles(BuildContext context) {
+Widget textStylesBaseComponents(BuildContext context) {
   final textTheme = Theme.of(context).textTheme;
 
   final styles = {
@@ -199,7 +199,7 @@ Widget textStyles(BuildContext context) {
 }
 
 @widgetbook.UseCase(name: 'Controls', type: BaseComponents)
-Widget controls(BuildContext context) {
+Widget controlsBaseComponents(BuildContext context) {
   final controls = {
     'Checkbox': {
       'Interactive': FormField<bool>(
@@ -265,7 +265,7 @@ Widget controls(BuildContext context) {
 }
 
 @widgetbook.UseCase(name: 'Indicators', type: BaseComponents)
-Widget indicators(BuildContext context) {
+Widget indicatorsBaseComponents(BuildContext context) {
   final value = context.knobs.double
       .slider(label: 'Value', min: 0, max: 1, initialValue: 0.5);
 
@@ -292,7 +292,7 @@ Widget indicators(BuildContext context) {
 }
 
 @widgetbook.UseCase(name: 'Chips', type: BaseComponents)
-Widget chips(BuildContext context) {
+Widget chipsBaseComponents(BuildContext context) {
   final label = context.knobs.string(label: 'Label', initialValue: 'Label');
 
   final chips = {
@@ -359,7 +359,7 @@ Widget chips(BuildContext context) {
 }
 
 @widgetbook.UseCase(name: 'AlertDialog', type: BaseComponents)
-Widget alertDialog(BuildContext context) {
+Widget alertDialogBaseComponents(BuildContext context) {
   final title = context.knobs.string(label: 'Title', initialValue: 'Title');
   final body = context.knobs.stringOrNull(label: 'Body', initialValue: 'Body');
   return Row(
@@ -385,7 +385,7 @@ Widget alertDialog(BuildContext context) {
 }
 
 @widgetbook.UseCase(name: 'BottomNavigationBar', type: BaseComponents)
-Widget bottombar(BuildContext context) {
+Widget bottombarBaseComponents(BuildContext context) {
   final items = context.knobs.double
       .slider(label: 'Items', min: 2, max: 5, divisions: 3, initialValue: 3)
       .toInt();
@@ -428,7 +428,7 @@ Widget bottombar(BuildContext context) {
 }
 
 @widgetbook.UseCase(name: 'TextField', type: BaseComponents)
-Widget textField(BuildContext context) {
+Widget textFieldBaseComponents(BuildContext context) {
   final hint = context.knobs.stringOrNull(label: 'Hint', initialValue: 'Hint');
   final label =
       context.knobs.stringOrNull(label: 'Label', initialValue: 'Label');
@@ -468,7 +468,7 @@ Widget textField(BuildContext context) {
 }
 
 @widgetbook.UseCase(name: 'ListTile', type: BaseComponents)
-Widget listTile(BuildContext context) {
+Widget listTileBaseComponents(BuildContext context) {
   final title = context.knobs.string(label: 'Title', initialValue: 'Title');
   final subTitle =
       context.knobs.stringOrNull(label: 'Subtitle', initialValue: 'Subtitle');
@@ -498,7 +498,7 @@ Widget listTile(BuildContext context) {
 }
 
 @widgetbook.UseCase(name: 'Card', type: BaseComponents)
-Widget card(BuildContext context) {
+Widget cardBaseComponents(BuildContext context) {
   return const Row(
     crossAxisAlignment: CrossAxisAlignment.stretch,
     mainAxisAlignment: MainAxisAlignment.center,
