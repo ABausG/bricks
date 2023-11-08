@@ -1,5 +1,0 @@
-.mason
-mason-lock.json
-examples/**/pubspec.lock
-.idea
-
